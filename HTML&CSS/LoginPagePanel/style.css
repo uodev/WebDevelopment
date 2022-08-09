@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+body {
+    background-image: linear-gradient(to right,rgb(91, 75, 138),rgb(55, 27, 88));
+    display: grid;
+    height: 100vh;
+    
+}
+
+.card {
+    margin: auto;
+    margin-top: 7%;
+    max-width: 500px;
+    width: 100%;
+    height: 700px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+}
+
+.baslik {
+    margin-left: 38%;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+
+
+.input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+    
+}
+
+.input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.card form .underline::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.card form .underline::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease-in;
+}
+
+.card form .input-box input:focus ~.underline::after,
+.card form .input-box input:valid ~ .underline::after
+{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.button{
+    margin: 40px 0 20px 0;
+}
+.button input{
+    color: white;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: red;
+    transition: all 0.4s ease;
+}
+
+.button input:hover {
+    color: red;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.card .text p{
+    font-size: 14px;
+    text-align: center;
+    color: grey;
+}
+
+.card .github a,
+.card .twitter a,
+.card .facebook a {
+    display: block;
+    width: 100%;
+    height: 55px;
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: white;
+    line-height: 55px;
+    border-radius: 8px;
+
+}
+
+.card .github a{
+    background-color: #24292e;
+    margin: 25px 0 15px 0;
+}
+
+.card .github a:hover{
+    background-color: #515e6b;
+}
+
+.card .twitter a{
+    background: #1ad1f2;
+    margin: 25px 0 15px 0;
+}
+
+.card .twitter a:hover {
+    background: #36c5df;
+}
+
+.card .facebook a{
+    background: #4267b2;
+    margin: 25px 0 50px 0;
+}
+
+.card .facebook a:hover{
+    background: #5d7bb6;
+}
+
+.card .github i,
+.card .twitter i,
+.card .facebook i
+{
+    font-size: 25px;
+    padding-right: 20px;
+    margin: 15px 0 0 0;
+}
+
+.card .register-text p{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card .register-text p:hover {
+    cursor: pointer;
+    font-size: 15px;
+}
